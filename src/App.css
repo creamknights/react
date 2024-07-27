@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+.profile-container {
+    display: flex;
+    justify-content: space-around; /* 요소들을 수평으로 균등하게 배치 */
+    align-items: center; /* 요소들을 수직으로 가운데 정렬 */
+  }
+  
+  .avatar-container {
+    display: flex;
+    flex-direction: column; /* 각 아바타를 수직으로 배치 */
+    align-items: center;
+    margin: 10px; /* 각 아바타 사이에 약간의 여백 추가 */
+  }
+  

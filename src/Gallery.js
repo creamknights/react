@@ -12,10 +12,10 @@ function Avatar(props) {
         className="avatar"
         src={props.photo}
         alt={props.name}
-        width={80}
-        height={80}
+        width={100}
+        height={100}
       />
-      <h5 key={props.id} style={{ color: props.color }}>{props.name}</h5>
+      <h3 key={props.id} style={{ color: props.color }}>{props.name}</h3>
     </div>
   );
 }
@@ -26,14 +26,14 @@ export function Profile() {
     { id: 2, name: "Gold Citrine", color: "goldenrod", photo: pic2 },
     { id: 3, name: "Mystic Opal", color: "plum", photo: pic3 },
   ];
-  const content = cookies.map((cookie) => (
+  const content = cookies.map(cookie =>
     <Avatar
       key={cookie.id}
       name={cookie.name}
       color={cookie.color}
       photo={cookie.photo}
     />
-  ));
+  );
 
   return <div className='profile-container'>{content}</div>;
 }

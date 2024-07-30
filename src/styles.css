@@ -1,0 +1,11 @@
+.fancy {
+  font-family: "Georgia";
+}
+.title {
+  color: #007aa3;
+  text-decoration: underline;
+  font-size: 20px;
+}
+.cursive {
+  font-style: italic;
+}

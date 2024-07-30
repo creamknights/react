@@ -1,4 +1,5 @@
 import { OSTs, quotes } from "./data.js";
+import FancyText from "./FancyText.js";
 // isCorrect가 true인 경우 체크 표시를 포함하여 반환
 function Item(props) {
   return (
@@ -6,15 +7,18 @@ function Item(props) {
   );
 }
 
-// style을 적용한 "Frozen" 텍스트
+/* // style을 적용한 "Frozen" 텍스트
 const title = (
   <span style={{ fontWeight: "bold", fontStyle: "italic" }}>Frozen</span>
-);
+); */
 
 export default function CheckList() {
   return (
     <section>
-      <p>Q. Check all the characters from the movie {title}.</p>
+      <p>
+        Q. Check all the characters from the movie{" "}
+        <FancyText title text="Frozen" />.
+      </p>
       <ul>
         <Item isCorrect={true} name="Elsa" />
         <Item isCorrect={true} name="Anna" />
@@ -47,7 +51,7 @@ export function QuoteList() {
     <li>
       <p>
         <b>
-          <q>{quote.quote}</q>
+          <FancyText text={quote.quote} />
         </b>{" "}
         from {quote.source}
       </p>
@@ -55,7 +59,9 @@ export function QuoteList() {
   ));
   return (
     <div>
-      <p>My favorite Quotes from {title}.</p>
+      <p>
+        My favorite Quotes from <FancyText title text="Frozen" />.
+      </p>
       <ul>{listItems}</ul>
     </div>
   );

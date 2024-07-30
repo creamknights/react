@@ -3,6 +3,7 @@ import { previewList } from "./data";
 
 export default function Room() {
   const [index, setIndex] = useState(0);
+  const [showMore, setShowMore] = useState(false);
 
   function handleBackClick() {
     if (index > 0) {
@@ -16,10 +17,14 @@ export default function Room() {
     }
   }
 
+  function handleMoreClick() {
+    setShowMore(!showMore);
+  }
+
   let preview = previewList[index];
   return (
     <>
-      <button onClick={handleBackClick}>Back</button>
+      <button onClick={handleBackClick}>Back</button>{" "}
       <button onClick={handleNextClick}>Next</button>
       <h2>
         <i>{preview.name}</i> - {preview.genre}
@@ -27,8 +32,13 @@ export default function Room() {
       <h3>
         ({index + 1} of {previewList.length})
       </h3>
+      <p>
+        <button onClick={handleMoreClick}>
+          {showMore ? "Hide" : "Show"} details
+        </button>
+      </p>
       <img src={preview.url} alt={preview.alt} width={150} height={150} />
-      <p>{preview.description}</p>
+      {showMore && <p>{preview.description}</p>}
     </>
   );
 }

@@ -1,3 +1,6 @@
+import pic3 from "./resource/MysticOpal.png";
+import picFrozen from "./resource/Frozen.jpg";
+
 export const OSTs = [
   "For the First Time in Forever",
   "Do You Want to Build a Snowman",
@@ -28,5 +31,23 @@ export const quotes = [
     id: 3,
     quote: "I just wanna see the floating lanterns gleam.",
     source: "Tangled",
+  },
+];
+
+export const previewList = [
+  {
+    name: "Cookie Run",
+    genre: "Game",
+    description:
+      "Let me introduce my favorite characters in <Cookie Run: Kingdom>",
+    url: pic3,
+  },
+  {
+    name: "Frozen",
+    genre: "Movie",
+    description:
+      "I am a huge fan of Frozen. I like two princess, Elsa and Anna, kingdom of Arendelle",
+    url: picFrozen,
+    alt: "Frozen Image",
   },
 ];

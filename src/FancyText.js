@@ -3,6 +3,6 @@ export default function FancyText({ title, text }) {
   return title ? (
     <span className="fancy title">{text}</span>
   ) : (
-    <h3 className="fancy cursive">{text}</h3>
+    <span className="fancy cursive">{text}</span>
   );
 }

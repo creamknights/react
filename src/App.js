@@ -24,7 +24,9 @@ export default function App() {
   ];
   let content = null;
   if (mode === "WELCOME") {
-    content = <Article title="Welcome" body={<Room></Room>}></Article>;
+    content = (
+      <Article title="Welcome (Preview)" body={<Room></Room>}></Article>
+    );
   } else if (mode === "READ") {
     let title = null;
     let body = null;

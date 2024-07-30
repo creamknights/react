@@ -3,6 +3,7 @@ import { Header, Nav, Article } from "./Structure.js";
 import Gallery from "./Gallery.js";
 import CheckList from "./PackingList.js";
 import { OSTList, QuoteList } from "./PackingList.js";
+import Room from "./preview.js";
 
 export default function App() {
   const [id, setId] = useState(null);
@@ -23,7 +24,7 @@ export default function App() {
   ];
   let content = null;
   if (mode === "WELCOME") {
-    content = <Article title="Welcome" body="Hello, WEB" />;
+    content = <Article title="Welcome" body={<Room></Room>}></Article>;
   } else if (mode === "READ") {
     let title = null;
     let body = null;
